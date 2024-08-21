@@ -1,0 +1,265 @@
+body {
+    background-color: #1a1b1c;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.top-menu-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-menu div {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.top-menu .search-button,
+.top-menu .home-button,
+.top-menu .account-button {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.top-menu div:hover {
+    background-color: #7c8388;
+}
+
+.top-menu .filter-button div :hover {
+    background-color: #7c8388;
+    border: 1px;
+}
+
+.top-menu div i {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+.account-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.accountBox {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    width: 100px;
+    z-index: 200;
+    background-color: transparent;
+}
+
+.accountBox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accountBox li {
+    border: 1px solid #7c8388;
+    margin-top: -1px;
+    background-color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    display: block;
+    border-radius: 20px;
+}
+
+.account-button:hover .accountBox {
+    display: block;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    background-color: #ffffff;
+    margin-bottom: 5%;
+    width: 70%;
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#drop-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#drop-area.highlight {
+    border-color: purple;
+}
+
+#fileElem {
+    display: none;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 5px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button:hover {
+    background: #959595;
+}
+
+#gallery {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    width: 40%;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #317834;
+}
+
+input::placeholder,
+textarea::placeholder {
+    text-align: center;
+}
+
+#moviesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.movieInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.movieInput input[type="text"] {
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.movieImageDropArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+.movieImageDropArea img {
+    margin-bottom: 10px;
+}
+
+.movieInput .button {
+    margin-top: 10px;
+}
+
+.deleteMovie {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.deleteMovie:hover {
+    background-color: #cc0000;
+}
+
+#addMoreMovies {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#addMoreMovies:hover {
+    background-color: #0056b3;
+}
+
+.actorDeathDate {
+    width: 20%;
+}

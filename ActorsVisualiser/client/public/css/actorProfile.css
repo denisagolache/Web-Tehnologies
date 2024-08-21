@@ -1,0 +1,166 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.top-menu div {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+}
+.top-menu .search-button,
+.top-menu .home-button,
+.top-menu .account-button {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    text-decoration: none;
+}
+.top-menu div:hover {
+    background-color: #7c8388;
+}
+.top-menu .filter-button div :hover {
+    background-color: #7c8388;
+    border: 1px;
+}
+.top-menu div i {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+.account-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.accountBox {
+    display: none;
+    position: absolute;
+    right: 0; 
+    padding: 20px;
+    width: 100px;
+    z-index: 200;
+    background-color: transparent;
+}
+
+.accountBox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accountBox li {
+    border: 1px solid #7c8388;
+    margin-top: -1px;
+    background-color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    display: block;
+    border-radius: 20px;
+}
+
+.account-button:hover .accountBox {
+    display: block;
+}
+.profile {
+    display: flex;
+    margin-top: 20px;
+}
+
+.profile img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-info h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    margin: 0;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.awards-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.awards-icons i:hover {
+    transform: scale(1.2);
+}
+
+.movies {
+    margin-top: 30px;
+}
+
+.movies h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+}
+
+#actors-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#actors-movies li {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#actors-movies li:hover {
+    transform: scale(1.05);
+}
+
+#actors-movies img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#actors-movies p {
+    margin: 10px 0 0;
+}

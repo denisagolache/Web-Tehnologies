@@ -1,0 +1,415 @@
+
+body {
+    background-color: #1a1b1c;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.top-menu div {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+}
+.top-menu .back-button,
+.top-menu .home-button,
+.top-menu .account-button {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+}
+.top-menu div:hover {
+    background-color: #7c8388;
+}
+.top-menu .filter-button div :hover {
+    background-color: #7c8388;
+    border: 1px;
+}
+.top-menu div i {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+.account-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.accountBox {
+    display: none;
+    position: absolute;
+    right: 0; 
+    padding: 20px;
+    width: 100px;
+    z-index: 200;
+    background-color: transparent;
+}
+
+.accountBox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accountBox li {
+    border: 1px solid #7c8388;
+    margin-top: -1px;
+    background-color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    display: block;
+    border-radius: 20px;
+}
+
+.account-button:hover .accountBox {
+    display: block;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    
+    margin-right: 20px;
+}
+
+.profile-info {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.download-button {
+    border-radius: 50%;
+    border: none;
+    background-color: #1a1b1c;
+    color: white;
+    padding: 10px 10px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    outline: none;
+}
+
+.download-button:hover {
+    background-color: #3a4754;
+}
+
+.download-button i {
+    margin-right: 5px;
+}
+
+.movies {
+    margin-top: 20px;
+}
+
+.movies h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.movies ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+}
+
+
+.movies li {
+    font-size: 16px;
+}
+
+.movies img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: filter 0.3s ease;
+}
+
+.movies img:hover {
+    filter: hue-rotate(180deg);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.fade {
+    transition: opacity 0.5s;
+}
+
+.fade:hover {
+    opacity: 0.5;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category-button {
+    flex: 0 0 30%;
+    background-color:#b08400;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size:8px;
+    font-weight: bold;
+    margin:4px auto;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.category-button:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #b08400;
+}
+.years {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto; 
+}
+
+.years .category-button {
+    flex: 1 0 20%;
+    margin: 5px;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+#moreButton {
+    background-color:#b08400;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    display: block;
+    font-size: 16px;
+    margin:10px auto;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#moreButton:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #b08400;
+}
+.show-container {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #7c8388;
+    border-radius: 10px;
+    background-color: #2a2b2c;
+    flex: 1 0 30%; 
+    box-sizing: border-box;
+}
+
+.show-image {
+    width: 100%;
+    max-width: 200px; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show-title {
+    font-size: 18px; 
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.actors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.actor-item {
+    text-align: center;
+    flex: 1 0 30%; 
+}
+
+.actor-image {
+    width: 100%;
+    max-width: 100px; 
+    border-radius: 10px;
+}
+
+.actor-name {
+    color: white;
+    margin-top: 5px; 
+}
+
+.show-container:hover .actors-container {
+    max-height: 800px; 
+    transition: max-height 0.5s ease-in-out;
+}
+
+.actors-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+.movies ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-gap: 20px;
+}
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+
+}
+
+.export-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.export-button-csv {
+    background-color: #b08405; 
+}
+
+.export-button-webp {
+    background-color: #b08410; 
+}
+
+.export-button-svg {
+    background-color:  #b08410; 
+
+}
+
+.charts canvas {
+    max-width: 400px;
+    max-height: 200px;
+}
+
+.statistics .charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.statistics .charts canvas {
+    max-width: 400px;
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+        padding: 10px;
+    }
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .container {
+        max-width: 1200px;
+        padding: 20px;
+    }
+}

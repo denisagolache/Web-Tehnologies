@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/statisticsPage.css">
+    <link rel="icon" href="../public/resources/statisticIcon.png" type="image/png">
+    <script src="../public/js/filter.js" defer></script>
+    <script src="../public/js/statisticsPage.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Statistics</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-menu">
+            <div class="back-button" id="backButton"><i class="fas fa-arrow-left"></i></div>
+            <div class="home-button"><a href="homePage.html"><i class="fas fa-home"></i></a></div>
+            <div class="account-button"><i class="fas fa-user"></i>
+                <div id="accountBox" class="accountBox">
+                    <a style="display: none;" href="login.html" id="login">
+                        <ul>
+                            <li>Login</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="loginAdmin.html" id="loginAdmin">
+                        <ul>
+                            <li>Login as Admin</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="register.html" id="register">
+                        <ul>
+                            <li>Register</li>
+                        </ul>
+                    </a>
+                    <a style="display : none;" id="logoutUser" onclick="logoutUserCookie()">
+                        <ul>
+                            <li>Logout</li>
+                        </ul>
+                    </a>
+                    <a style="display : none;" id="logoutAdmin" onclick="logoutAdminCookie()">
+                        <ul>
+                            <li>Logout</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="profile-info">
+                <h1>More fields. Select a button to see the desired information</h1>
+                <div class="categories">
+                </div>
+                <div class="years">
+                </div>
+            </div>
+        </div>
+        <div class="chart-controls">
+            <button id="exportCSV" class="export-button export-button-csv">Export CSV</button>
+            <button id="exportWebP" class="export-button export-button-csv">Export WebP</button>
+            <button id="exportSVG" class="export-button export-button-csv">Export SVG</button>
+        </div>
+        <div class="charts">
+            <canvas id="barChart"></canvas>
+            <canvas id="lineChart"></canvas>
+            <canvas id="pieChart"></canvas>
+        </div>
+      
+        <div class="movies">
+            <h2>Show & Nominated Actors</h2>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <script src="../public/js/backButton.js"></script>
+    <script>
+        const filteredItems = JSON.parse(sessionStorage.getItem('filteredItems'));
+    </script>
+
+    <button id="moreButton">More</button>
+
+    <script src="../public/js/logout.js"></script>
+
+</body>
+
+</html>

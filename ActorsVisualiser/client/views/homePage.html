@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcVis</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/homePage.css">
+    <link rel="icon" href="../resources/homePageIcon.png" type="image/png">
+    <link rel="photos" href="../public/resources">
+    <script src="../public/js/filter.js" defer></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="centrat text-container"> </div>
+        <div class="top-menu">
+            <div class="filter-button"><i class="fas fa-filter"></i>
+                <div id="filterBox" class="filterBox">
+                    <a href="statisticsPage.html?filter=year">
+                        <ul>
+                            <li>Ceremonies</li>
+                        </ul>
+                    </a>
+                    <a href="statisticsPage.html?filter=tv-series">
+                        <ul>
+                            <li>TV Series</li>
+                        </ul>
+                    </a>
+                    <a href="statisticsPage.html?filter=category">
+                        <ul>
+                            <li>Category</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+            <div class="search-button"><i class="fas fa-search"></i>
+                <div id="searchBox" class="searchBox">
+                    <input type="text" placeholder="Search an actor..">
+                </div>
+            </div>
+            <div class="account-button"><i class="fas fa-user"></i>
+                <div id="accountBox" class="accountBox">
+                    <a style="display: none;" href="manageUsers.html" id="manageUsers">
+                        <ul>
+                            <li>Manage user accounts</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="login.html" id="login">
+                        <ul>
+                            <li>Login as User</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="loginAdmin.html" id="loginAdmin">
+                        <ul>
+                            <li>Login as Admin</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="register.html" id="register">
+                        <ul>
+                            <li>Register</li>
+                        </ul>
+                    </a>
+                    <a style="display : none;" id="logoutUser" onclick="logoutUserCookie()">
+                        <ul>
+                            <li>Logout</li>
+                        </ul>
+                    </a>
+                    <a style="display : none;" id="logoutAdmin" onclick="logoutAdminCookie()">
+                        <ul>
+                            <li>Logout</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; color: #a78623;">Top 3 Most Popular Actors and Movies from Today</h1>
+    <hr>
+    <div class="container logoActors1" id="logoActors1">
+        <div class="logoCaption">
+        </div>
+        <div class="infoBox">
+        </div>
+    </div>
+    <div class="movie1Container">
+        <h1>Movie</h1>
+        <div class="infoBox">
+            <h1>Actors</h1>
+            <p>
+
+            </p>
+
+        </div>
+        <p>
+
+        </p>
+    </div>
+
+    <div class="movie2Container">
+        <h1>
+            Movie
+        </h1>
+        <div class="infoBox">
+            <h1>Actors</h1>
+            <p>
+
+            </p>
+        </div>
+        <p>
+
+        </p>
+    </div>
+
+    <div class="container logoActors2" id="logoActors2">
+        <div class="logoCaption">
+        </div>
+        <div class="infoBox">
+        </div>
+    </div>
+    <div class="movie3Container">
+        <h1>TV Series</h1>
+        <p>
+
+        </p>
+        <div class="infoBox">
+            <h1>Actors</h1>
+            <p>
+
+            </p>
+        </div>
+    </div>
+    <div class="container logoActors3" id="logoActors3">
+        <div class="logoCaption">
+        </div>
+        <div class="infoBox">
+        </div>
+    </div>
+
+    <div class="newsContainer">
+        <a href="news.html">
+            <div class="newsCaption">
+                <h2>📰Read the Latest News About the Nominated Actors!📰</h2>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="containerTitle">
+        <hr>
+        <h1>More Actors</h1>
+        <p><a href="#" class="letter" data-letter="A">A</a>
+            <a href="#" class="letter" data-letter="B">B</a>
+            <a href="#" class="letter" data-letter="C">C</a>
+            <a href="#" class="letter" data-letter="D">D</a>
+            <a href="#" class="letter" data-letter="E">E</a>
+            <a href="#" class="letter" data-letter="F">F</a>
+            <a href="#" class="letter" data-letter="G">G</a>
+            <a href="#" class="letter" data-letter="H">H</a>
+            <a href="#" class="letter" data-letter="I">I</a>
+            <a href="#" class="letter" data-letter="J">J</a>
+            <a href="#" class="letter" data-letter="K">K</a>
+            <a href="#" class="letter" data-letter="L">L</a>
+            <a href="#" class="letter" data-letter="M">M</a>
+            <a href="#" class="letter" data-letter="N">N</a>
+            <a href="#" class="letter" data-letter="O">O</a>
+            <a href="#" class="letter" data-letter="P">P</a>
+            <a href="#" class="letter" data-letter="Q">Q</a>
+            <a href="#" class="letter" data-letter="R">R</a>
+            <a href="#" class="letter" data-letter="S">S</a>
+            <a href="#" class="letter" data-letter="T">T</a>
+            <a href="#" class="letter" data-letter="U">U</a>
+            <a href="#" class="letter" data-letter="V">V</a>
+            <a href="#" class="letter" data-letter="W">W</a>
+            <a href="#" class="letter" data-letter="X">X</a>
+            <a href="#" class="letter" data-letter="Y">Y</a>
+            <a href="#" class="letter" data-letter="Z">Z</a>
+        </p>
+    </div>
+    <div class="actorsTable" id="actorsTable">
+        <div class="actorsLine">
+
+        </div>
+    </div>
+    <div class="more" id="moreButton"> <a href="#">MORE </a> </div>
+    <div class="filler"></div>
+    <div class="filler"></div>
+    <div class="filler1"></div>
+
+    <script src="../public/js/homePage.js" defer></script>
+    <script src="../public/js/logout.js" defer></script>
+    <script src="../public/js/getMovieDetails.js" defer></script>
+    <script src="../public/js/searchButton.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/actorProfile.css">
+    <link rel="icon" href="../public/resources/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Actor Profile</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-menu">
+            <div class="back-button" id="backButton"><i class="fas fa-arrow-left"></i></div>
+            <div class="home-button"><a href="homePage.html"><i class="fas fa-home"></i></a></div>
+            <div style="display: none;" id="favorites-button"><a href="favoritesActors.html"><i
+                        class="fas fa-heart"></i></a></div>
+            <div class="account-button"><i class="fas fa-user"></i>
+                <div id="accountBox" class="accountBox">
+                    <a style="display: none;" href="manageUsers.html" id="manageUsers">
+                        <ul>
+                            <li>Manage user accounts</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="login.html" id="login">
+                        <ul>
+                            <li>Login</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="loginAdmin.html" id="loginAdmin">
+                        <ul>
+                            <li>Login as Admin</li>
+                        </ul>
+                        <a style="display: none;" href="register.html" id="register">
+                            <ul>
+                                <li>Register</li>
+                            </ul>
+                        </a>
+                        <a style="display : none;" id="logoutUser" onclick="logoutUserCookie()">
+                            <ul>
+                                <li>Logout</li>
+                            </ul>
+                        </a>
+                        <a style="display : none;" id="logoutAdmin" onclick="logoutAdminCookie()">
+                            <ul>
+                                <li>Logout</li>
+                            </ul>
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div class="profile">
+            <img id="actor-profile-image" src="../public/resources/actorProfile.png" alt="Actor Profile">
+            <div class="profile-info">
+                <h1 id="actor-name">
+                    <!-- Content will be updated dynamically -->
+                </h1>
+                <p id="actor-details">
+                    <!-- Content will be updated dynamically -->
+                </p>
+                <p id="actor-profile-birthday">
+                    <!-- Content will be updated dynamically -->
+                </p>
+                <p id="actor-profile-deathday">
+                    <!-- Content will be updated dynamically -->
+                </p>
+                <p id="actor-profile-birthplace">
+                    <!-- Content will be updated dynamically -->
+                </p>
+                <p id="actor-profile-department">
+                    <!-- Content will be updated dynamically -->
+                </p>
+                <div class="awards-icons">
+                    <a style="display: none;" id="add-to-favorites"><i class="fas fa-heart"
+                            data-tooltip="Add To Favorite"></i></a>
+                    <a style="display: none;" href="addActor.html" id="add-actor"><i class="fas fa-user-plus"
+                            data-tooltip="Add Actor"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="movies">
+            <h2>Movies &#127909</h2>
+            <ul id="actors-movies">
+                <!-- Content will be updated dynamically -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="../public/js/backButton.js"></script>
+    <script src="../public/js/actorProfile.js" defer></script>
+    <script src="../public/js/addToFavorite.js" defer></script>
+    <script src="../public/js/logout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+</body>
+
+</html>

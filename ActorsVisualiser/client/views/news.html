@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/news.css">
+    <link rel="icon" href="../public/resources/newsIcon.png" type="image/png">
+    <link rel="photos" href="../public/resources">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="centrat text-container">
+        </div>
+        <div class="top-menu">
+            <div class="home-button"><a style="text-decoration: none;" href="homePage.html"><i class="fas fa-home"></i></a></div>
+            <div class="search-button"><i class="fas fa-search"></i>
+                <div id="searchBox" class="searchBox">
+                    <input type="text" placeholder="Search...">
+                    <div class="search-recommendations">
+                        <!-- recommendations will be injected here -->
+                    </div>
+                </div>
+            </div>
+            <div class="account-button"><i class="fas fa-user"></i>
+                <div id="accountBox" class="accountBox">
+                    <a style="display: none;" href="manageUsers.html" id="manageUsers">
+                        <ul>
+                            <li>Manage user accounts</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="login.html" id="login">
+                        <ul>
+                            <li>Login as User</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="loginAdmin.html" id="loginAdmin">
+                        <ul>
+                            <li>Login as Admin</li>
+                        </ul>
+                    </a>
+                    <a style="display: none;" href="register.html" id="register">
+                        <ul>
+                            <li>Register</li>
+                        </ul>
+                    </a>
+                    <a style="display : none;" id="logoutUser" onclick="logoutUserCookie()">
+                        <ul>
+                            <li>Logout</li>
+                        </ul>
+                    </a>
+                    <a style="display : none;" id="logoutAdmin" onclick="logoutAdminCookie()">
+                        <ul>
+                            <li>Logout</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="actor-info">
+            <img id="actorImage" src="../public/resources/newspaper.png" alt="Actor Image">
+        </div>
+
+        <div class="news-container">
+            <h2>Latest News</h2>
+            <p style="font-size: large; ">Stay up to date with the latest news about Nominated Actors. 
+                <p style=' font-weight: bold;'>Search up and choose the actor you want to get news about. </p>
+            <ul id="newsList">
+                <!-- dynamically generated news articles -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="filler"></div>
+
+    <script src="../public/js/logout.js"></script>
+    <script src="../public/js/news.js"></script>
+
+</body>
+
+</html>

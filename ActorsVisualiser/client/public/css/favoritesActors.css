@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+    background-color: #1c1c1c;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    min-height: 300px;
+    background-image: url("../resources/actorsSmart.png");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.text-container h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.centrat {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 24px;
+    color: white;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-menu div {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.top-menu .filter-button,
+.top-menu .search-button,
+.top-menu .account-button {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.top-menu div:hover {
+    background-color: #a78623;
+}
+
+.top-menu .filter-button div :hover {
+    background-color: #a78623;
+    border: 1px;
+}
+
+.top-menu div i {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+.account-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.accountBox {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    width: 100px;
+    z-index: 200;
+    background-color: transparent;
+}
+
+.accountBox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accountBox li {
+    border: 1px solid #a78623;
+    margin-top: -1px;
+    background-color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    display: block;
+    border-radius: 20px;
+}
+
+.account-button:hover .accountBox {
+    display: block;
+}
+
+.favorites {
+    display: flex;
+    background-color: #a78623;
+    justify-content: center;
+    color: white;
+    width: 80%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.filler {
+    height: 80px;
+}
+
+.searchBox {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    width: 400px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    top: auto;
+}
+
+.searchBox input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.search-button:hover .searchBox {
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.searchBox ul {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.actorCircle {
+    width: 150px;
+    height: 250px;
+    border-radius: 10%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.actorCircle:hover {
+    transform: scale(1.05);
+}
+
+.actorName {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #a78623;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.highlight {
+    border: 5px solid rgb(231, 231, 148);
+    animation: highlight-animation 1s ease-in-out;
+}
+
+@keyframes highlight-animation {
+    from { background-color: rgb(231, 231, 148); }
+    to { background-color: transparent; }
+}
+
+
+@media screen and (max-width: 767px) {
+    .top-menu {
+        padding: 5px;
+    }
+
+    .top-menu div {
+        padding: 5px;
+    }
+
+    .top-menu div i {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .text-container {
+        min-height: 130px;
+    }
+
+    .actorCircle {
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+        margin: 10px auto;
+    }
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1323px) {
+    .text-container {
+        min-height: 180px;
+    }
+
+    .top-menu {
+        padding: 5px;
+    }
+
+    .top-menu div {
+        padding: 5px;
+    }
+
+    .top-menu div i {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+        gap: 20px;
+    }
+
+    .actorCircle {
+        width: calc(175px - 20px);
+        height: 175px;
+        border-radius: 20px;
+    }
+}

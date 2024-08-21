@@ -1,0 +1,810 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.row-padding { padding: 0 8px; }
+.hover-opacity-off:hover { opacity: 1; }
+
+.p { margin-bottom: 50px; }
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    min-height: 300px;
+    background-image: url("../resources/actorsSmart.png");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.text-container h1 { font-size: 100px; }
+
+.centrat {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 24px;
+    color: white;
+}
+
+.container {
+    display: grid;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-menu div {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.top-menu .filter-button,
+.top-menu .search-button,
+.top-menu .account-button {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.top-menu div:hover { background-color: #7c8388; }
+.top-menu .filter-button div :hover {
+    background-color: #7c8388;
+    border: 1px;
+}
+
+.top-menu div i {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+.filter-button { cursor: pointer; }
+.filterBox {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    width: 200px;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.filterBox ul { list-style-type: none; padding: 0; margin: 0; }
+.filterBox li {
+    border: 1px solid #7c8388;
+    margin-top: -1px;
+    background-color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: block;
+    border-radius: 20px;
+}
+
+.filter-button:hover .filterBox { display: block; }
+
+.searchBox {
+    display: none;
+    position: absolute;
+    right: auto;
+    padding: 10px;
+    width: 400px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    top: auto;
+    z-index: 100;
+}
+
+.searchBox input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.search-button:hover .searchBox {
+    display: flex;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+}
+
+.searchBox ul { max-height: 200px; overflow-y: auto; }
+
+.account-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.accountBox {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    width: 200px;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.accountBox ul { list-style-type: none; padding: 0; margin: 0; }
+
+.accountBox li {
+    border: 1px solid #7c8388;
+    margin-top: -1px;
+    background-color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    display: block;
+    border-radius: 20px;
+}
+
+.account-button:hover .accountBox { display: block; }
+
+.movie1Container {
+    max-width: 600px;
+    background-color: #1a1b1c;
+    left: 50px;
+    right: auto;
+    position: relative;
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: bottom;
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.movie1Container .infoBox {
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 100%;
+    transform: translateX(-50%) translateY(0);
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    background-color: #1a1b1c;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.movie1Container.infoBox a { text-decoration: none; }
+.movie1Container:hover .infoBox {
+    display: block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.movie1Container h1 {
+    font-size: 50px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.movie1Container p {
+    color: antiquewhite;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.paragraphContainer {
+    max-width: 600px;
+    left: 100px;
+    right: inherit;
+    position: relative;
+    width: 500px;
+}
+
+.movie1Container .paragraphContainer p {
+    color: antiquewhite;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    overflow: hidden;
+}
+
+.movie2Container {
+    max-width: 600px;
+    right: 50px;
+    position: absolute;
+    background-color: #1a1b1c;
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+}
+
+.movie2Container h1 {
+    font-size: 50px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.movie2Container p {
+    color: antiquewhite;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.movie2Container .paragraphContainer {
+    max-width: 600px;
+    left: 0px;
+    position: relative;
+    width: 500px;
+}
+
+.movie2Container .paragraphContainer p {
+    color: antiquewhite;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.movie2Container .infoBox {
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+    transform: translateX(-50%) translateY(0);
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    background-color: #1a1b1c;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.movie2Container:hover .infoBox {
+    display: block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.movie3Container {
+    max-width: 600px;
+    background-color: #1a1b1c;
+    left: 50px;
+    right: inherit;
+    top: 500px;
+    position: relative;
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: bottom center;
+    margin-bottom: 20px;
+}
+
+.movie3Container h1 {
+    font-size: 50px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.movie3Container p {
+    color: antiquewhite;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.movie3Container .infoBox {
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 100%;
+    transform: translateX(-50%) translateY(0);
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    background-color: #1a1b1c;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.movie3Container:hover .infoBox {
+    display: block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.movie1Container p,
+.movie2Container p,
+.movie3Container p {
+    margin-bottom: 70px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logoActors1 {
+    position: absolute;
+    top: 430px;
+    background-color: #1a1b1c;
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    transition: opacity 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    left: calc(100% - 600px);
+}
+
+.logoActors2 {
+    position: absolute;
+    top: 950px;
+    background-color: #1a1b1c;
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    transition: opacity 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    left: calc(50% - 600px);
+}
+
+.logoActors3 {
+    position: relative;
+    top: 0;
+    background-color: #1a1b1c;
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    transition: opacity 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    left: calc(345px);
+    z-index: -1;
+}
+
+.actorsContainer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.logoCaption {
+    text-align: center;
+    margin-top: 355px;
+    color: rgb(255, 255, 255);
+    background-color: #b08400;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    position: relative;
+}
+
+.logoCaption .infoBox {
+    display: none;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    background-color: #1a1b1c;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.logoCaption:hover .infoBox {
+    display: block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.logoCaption .infoBox a { text-decoration: none; }
+
+.filler { height: 80px; }
+.filler1 { height: 30px; }
+
+.actorsLine {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+}
+
+.logoCaption:hover + .infoBox { display: block; }
+.dimmed::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.infoBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.movie1Container p,
+.movie2Container p,
+.movie3Container p {
+    font-size: 1.5em;
+}
+
+.actorCircle {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: black;
+    background-image: url('../resources/reset.png');
+    margin-top: 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+.actorCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.actorName,
+.actorNameOverlay {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.actorCircle:hover { opacity: 0.5; }
+
+.actorCircle:hover .actorName,
+.actorCircle:hover .actorNameOverlay { opacity: 1; }
+
+.actorsTable {
+    margin: auto;
+    display: grid;
+    max-width: 1600px;
+}
+
+.more {
+    position: absolute;
+    opacity: 0.9;
+    margin-top: 40px;
+    width: 20%;
+    height: 25px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #b3b3b3;
+    color: #b79191;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.more:hover { opacity: 0.8; }
+
+a {
+    text-decoration: none;
+    color: #1a1b1c;
+}
+
+.containerTitle {
+    position: relative;
+    top: 50px;
+    margin: 5px auto;
+    background-color: transparent;
+    color: black;
+    max-width: 1400px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.containerTitle p {
+    background-color: #b08400;
+    margin: auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.search-recommendations {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #eee; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.search-recommendations ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.search-recommendations li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    position: relative; 
+}
+
+.search-recommendations li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+    z-index: 0;
+}
+
+.search-recommendations li a {
+    text-decoration: none;
+    color: inherit; 
+    position: relative; 
+    z-index: 1;
+}
+.search-recommendations li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.search-recommendations li:hover {
+    background-color: #f0f0f0;
+}
+
+.search-recommendations.always-active {
+    display: block !important;
+    background-color: #ccc;
+}
+
+
+.newsContainer {
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.newsContainer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.newsContainer .newsCaption {
+    background-color: #1a1b1c;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.newsContainer .newsCaption h2 {
+    font-size: 24px;
+}
+
+.newsContainer .newsCaption:hover {
+    background-color: #333;
+}
+
+@media (max-width: 1323px) {
+    .text-container {
+        min-height: 180px;
+    }
+
+    .top-menu {
+        padding: 5px;
+    }
+
+    .top-menu div {
+        padding: 5px;
+    }
+
+    .top-menu div i {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .logoActors1,
+    .movie1Container,
+    .logoActors2,
+    .movie2Container,
+    .logoActors3,
+    .movie3Container {
+        width: 100%;
+        margin: auto;
+        left: auto;
+        right: auto;
+        position: relative;
+        margin-top: 20px;
+        border-radius: 20px;
+        height: auto;
+        background-position: center;
+        font-size: large;
+    }
+
+    .movie1Container.infoBox,
+    .movie2Container .infoBox,
+    .movie3Container .infoBox {
+        margin: auto;
+        left: 20%;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .logoActors3,
+    .logoActors2,
+    .logoActors1 {
+        width: auto;
+        height: auto;
+    }
+
+    .logoCaption { font-size: large; }
+
+    .movie3Container { top: 20px; }
+
+    .logoActors1,
+    .logoActors2,
+    .logoActors3 {
+        top: 20px;
+        border-radius: 20px;
+        background-size: cover;
+    }
+
+    .logoActors2 { order: 2; }
+
+    .logoActors3 { order: 3; }
+
+    .actorCircle { width: calc(175px - 20px); }
+
+    .actorsLine {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .actorsTable { display: grid; }
+}
+
+@media (max-width: 767px) {
+    .top-menu { padding: 5px; }
+
+    .top-menu div { padding: 5px; }
+
+    .top-menu div i {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .text-container { min-height: 130px; }
+
+    .logoActors1,
+    .movie1Container,
+    .logoActors2,
+    .movie2Container,
+    .logoActors3,
+    .movie3Container {
+        width: 100%;
+        left: auto;
+        right: auto;
+        position: relative;
+        margin-top: 20px;
+        border-radius: 20px;
+        height: auto;
+        background-position: center;
+    }
+
+    .movie1Container .infoBox,
+    .movie2Container .infoBox,
+    .movie3Container .infoBox {
+        left: 70%;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .actorsLine {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .movie3Container {
+        width: 100%;
+        margin: auto;
+        left: auto;
+        right: auto;
+        position: relative;
+        margin-top: 20px;
+        border-radius: 20px;
+        height: auto;
+        background-position: center;
+    }
+
+    .logoActors1,
+    .logoActors2,
+    .logoActors3 {
+        top: 20px;
+        border-radius: 20px;
+        background-size: cover;
+    }
+}
